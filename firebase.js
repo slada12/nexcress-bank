@@ -29,14 +29,14 @@ function generateAccountNumber() {
 
 async function sendRegistrationEmail(name, email, accountNumber) {
     const data = {
-        service_id: 'service_u4bxj8p', // Your EmailJS service ID
-        template_id: 'template_n387z6f', // Your EmailJS template ID, Create a new template ID
-        user_id: 'wFjLvmBKtil7JR8Bd', // Your EmailJS user ID
+        service_id: 'service_5oktdi2', // Your EmailJS service ID
+        template_id: 'template_6ehapif', // Your EmailJS template ID, Create a new template ID
+        user_id: '4LogJ6QMAPJI99HFE', // Your EmailJS user ID
         template_params: {
             to_name: name,
             to_email: email,
-            from_name: 'ApexTFB.com',
-            from_email: 'support@apextfb.com',
+            from_name: 'NexcresT Bank',
+            from_email: 'support@nexcress.com',
             account_number: accountNumber,
             instructions: 'Your registration was successful. Please use the following account number to log in: ' + accountNumber
         },
@@ -244,19 +244,22 @@ async function login() {
             const userData = snapshot.val();
             console.log(userData);
             if (userData.password === password) {
-                console.log('Generating 2FA Code');
+                // console.log('Generating 2FA Code');
                 // Generate 2FA code
-                const twoFACode = generate2FACode();
+                // const twoFACode = generate2FACode();
 
                 // Send 2FA code to user's email
-                await send2FACodeEmail(userData.firstName, userData.email, twoFACode);
+                // await send2FACodeEmail(userData.firstName, userData.email, twoFACode);
 
                 // Store 2FA code in sessionStorage
-                sessionStorage.setItem('2faCode', twoFACode);
-                sessionStorage.setItem('accountNumber', userData.accountNumber);
+                // sessionStorage.setItem('2faCode', twoFACode);
+                // sessionStorage.setItem('accountNumber', userData.accountNumber);
+
+                const token = generateToken(accountNumber);
+                sessionStorage.setItem('token', token);
 
                 // Redirect to 2FA verification page
-                window.location.href = 'verification.html';
+                window.location.href = 'dash.html';
             } else {
                 alert('Invalid password.');
             }
@@ -332,7 +335,7 @@ async function getUserDetails() {
             console.log('User Details:', userData);
             // Process or display user details
             // Find the element with the class 'user-name'
-            const userNameElement = document.querySelector('.name');
+            const userNameElement = document.querySelector('.username');
             const justName = document.querySelector('.jname');
             const inputValue = document.querySelector('input[name="op"]');
             const phoneValue = document.querySelector('input[name="fgf"]');
@@ -406,13 +409,13 @@ async function getUserDetails() {
                 '.user-email': userData.email,
                 '.user-phone': userData.phone,
                 '.user-country': userData.country,
-                '.user-account': userData.accountNumber,
-                '.nok-name': userData.nextOfKin.name,
-                '.nok-phone': userData.nextOfKin.phone,
-                '.nok-email': userData.nextOfKin.email,
-                '.nok-address': userData.nextOfKin.address,
+                '.useraccount': userData.accountNumber,
+                // '.nok-name': userData.nextOfKin.name,
+                // '.nok-phone': userData.nextOfKin.phone,
+                // '.nok-email': userData.nextOfKin.email,
+                // '.nok-address': userData.nextOfKin.address,
                 '.drop-name': userData.firstName,
-                '.info-box-number': balance,
+                '.userbalance': balance,
             };
 
             // Update the HTML with user data
@@ -433,9 +436,10 @@ async function getUserDetails() {
         console.error('Error during authentication:', error);
         const url = window.location.href;
         sessionStorage.setItem('url', url)
+        console.log(error);
         // Token verification failed
         alert('Error retrieving user details.');
-        window.location.href = 'login.html';
+        // window.location.href = 'login.html';
     }
 }
 

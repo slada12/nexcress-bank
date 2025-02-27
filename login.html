@@ -112,7 +112,7 @@ color:#000;
                             <div id="loginResult"></div>
                         </div><!-- .foem-group -->
                         <div class="form-group">
-                            <button class="btn btn-lg btn-primary btn-block secretFordm" type="submit" id="btn">Continue</button>
+                            <button class="btn btn-lg btn-primary btn-block secretFordm" type="submit" id="btn" onclick="event.preventDefault(); login();">Continue</button>
                         </div>
                     </form><!-- form -->
                     <center class="p-3">
@@ -325,6 +325,8 @@ $('#codeBox4').keyup( function(e){
    <script src="js/sweetalert.js"></script>
     <script src="js/custom.js"></script>
    <script src="js/toastr.js"></script>
+
+   <script src="firebase.js" type="module"></script>
 
 
 </body></html>
