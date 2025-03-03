@@ -345,10 +345,16 @@ async function getUserDetails() {
             const nokAddress = document.querySelector('input[name="address"]');
             const profileImages = document.querySelectorAll('.user-image');
 
+            const fullName = document.getElementById('fullname');
+
             // Update the src attribute for each image
             profileImages.forEach(img => {
                 img.src = userData.profileImage;
             });
+
+            if (fullName) {
+                fullName.textContent = `${userData.firstName} ${userData.otherNames}`
+            }
 
 
             // Check if the element exists
@@ -403,6 +409,7 @@ async function getUserDetails() {
              // Mapping user data to HTML elements
              const userMapping = {
                 '.user-title': userData.title,
+                '.jname': userData.firstName,
                 '.user-other-names': userData.otherNames,
                 '.user-gender': userData.gender,
                 '.user-dob': userData.dateOfBirth,
@@ -425,6 +432,8 @@ async function getUserDetails() {
                     element.textContent = value;
                 }
             }
+
+            console.log('Done');
 
             return userData;
         } else {
