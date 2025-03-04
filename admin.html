@@ -1,958 +1,461 @@
-<!DOCTYPE html><html><head>
-    <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="robots" content="noindex,nofollow">
-    <title>APEX TFB          Online          </title>
-    <link rel="icon" type="image/png" href="images/logo.png">
-    <!-- Tell the browser to be responsive to screen width -->
-    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-    <!-- Bootstrap 3.3.7 -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="css/font-awesome.min.css">
-    <!-- <link rel="stylesheet" href="icon.css"> -->
-  
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-  
-    
-    <!-- Ionicons 
-    <link rel="stylesheet" href="bower_components/Ionicons/css/ionicons.min.css"> -->
-    <!-- jvectormap 
-    <link rel="stylesheet" href="bower_components/jvectormap/jquery-jvectormap.css"> -->
-    <!-- Theme style -->
-    <link rel="stylesheet" href="css/AdminLTE.min.css">
-  
-    <link rel="stylesheet" href="css/style2.css">
-    <!-- AdminLTE Skins. Choose a skin from the css/skins
-         folder instead of downloading all of them to reduce the load. -->
-    <link rel="stylesheet" href="css/all-skins.min.css">
-  
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-  
-    <script src="firebaseInit.js" type="module"></script>
-  
-  <!-- Separate script block to execute getUserDetails() -->
-  <script type="module">
-      console.log('Working..');
-      getUserDetails(); // Execute the function
-  </script>
-  
-  <!-- <script>const name = ()=> {console.log('Wprking')}</script> -->
-  
-  <script>
-    function nameEmma() {
-      console.log('Emma')
-    };
-  </script>
-  
-    <!-- Google Font -->
-    <link rel="stylesheet" href="css/css.css">
-  
-  
-    <script type="text/javascript">
-  function googleTranslateElementInit() {
-    new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
-  }
-  </script>
-  <script type="text/javascript" src="js/element.js"></script>
-  
-  
-      <style type="text/css">
-  
-   .goog-te-banner-frame.skiptranslate {
-              display: none !important;
-          } 
-          body {
-              top: 0px !important; 
-          }
-  
-  
-    .goog-logo-link {
-     display:none !important;
-  }
-  
-  select.goog-te-combo{width:100%!important;}
-  
-  
-  
-  
-  
-  .goog-te-gadget{
-     color: transparent !important;
-     border-color: transparent !important;
-     background-color: transparent !important;
-  }
-  .goog-te-gadget .goog-te-combo {
-      color: #4A002D !important;
-      width: 193px;
-      padding: 1px;
-      border-radius: 0px;
-      font-size: 12px;
-      font-style: 'Open Sans', sans-serif;
-      border-color: transparent !important;
-      background-color: transparent !important;
-      cursor: pointer;
-      letter-spacing: 0.5px;
-      text-align: center;
-      text-align-last:center;
-  
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    text-indent: 1px;
-    text-overflow: '';
-  
-    /* for Firefox */
-    -moz-appearance: none;
-    /* for Chrome */
-    -webkit-appearance: none;
-  }
-  
-      .goog-te-banner-frame{
-        display: none !important;
+<!DOCTYPE html><html lang="en-US" class="js"><head>
+  <meta charset="utf-8">
+  <meta name="author" content="Smart">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="This Credit Union is federally insured by the National Credit Union Administration. We do business in accordance with the Fair Housing Law and Equal opportunity Credit Act.">
+  <!-- Fav Icon  -->
+  <link rel="shortcut icon" href="images/favicon.png">
+  <!-- Page Title  -->
+  <title>Admin| Nexcrests Bank Online banking</title>
+  <!-- StyleSheets  -->
+  <link rel="stylesheet" href="css/sweetalert.css">
+  <link rel="stylesheet" href="css/dashlite.css">
+  <link id="skin-default" rel="stylesheet" href="css/theme.css">
+  <link rel="stylesheet" type="text/css" href="css/fontawesome-icons.css">
+  <link href="css/toastr.css" rel="stylesheet">
+<link rel="stylesheet" href="css/intlTelInput.css"></head>
+
+<body class="nk-body npc-crypto bg-white has-sidebar "><div class="gtranslate_wrapper"></div>
+<script>
+  window.gtranslateSettings = {
+      "default_language": "en",
+      "native_language_names": true,
+      "detect_browser_language": true,
+      "wrapper_selector": ".gtranslate_wrapper",
+      "alt_flags": {
+          "en": "usa"
       }
-      
-      .goog-te-menu-frame{
-        -webkit-box-shadow: none !important;
-        box-shadow: -1px 2px 20px 0px #4444447a !important;
-      }
-      .goog-te-menu2-item div, .goog-te-menu2-item:link div, .goog-te-menu2-item:visited div, .goog-te-menu2-item:active div {
-        font-family: "Open Sans", sans-serif !important ;
-        border: 1px solid #ffffff !important;
-        background-color: #b70000 !important;
-        color: #4A002D !important;
-      }
-  
-      a:hover {
-         text-decoration: none !important;
-      }
-      body[style] {
-         top: 0px !important;
-      }
-      a {
-         outline: none !important;
-      }
-      .close{
-         outline: none !important;
-      }
-  
-  
-  
-  
-  
-  </style>
-  
-  
-  
-  <script type="text/javascript">
-    function backs(){
-      window.location='fundtransfer.php';
-    }
-    function tac_processing(){
-      window.location='../ob2/l/tacauthentication.php?nQVbd=bmVquMAOC6130sfRWL';
-    }
-    function logouts(){
-      window.location='logout.php';
-    }
-  
-      function homee(){
-      window.location='index.php';
-    }
-    function tra(){
-      window.location='fundtransfer.php';
-    }
-  
-  function btw(){
-    window.location='btw_trans.php';
   }
-  
-  
-    function isNumberKey(evt){
-      var charCode = (evt.which) ? evt.which : event.keyCode
-      if (charCode > 31 && (charCode < 48 || charCode > 57))
-          return false;
-      return true;
-    }
-  </script>
-  
-  <script src="js/jquery.min.js"></script>
-  
-  <style type="text/css">
-  .blink {
-      animation: blinker 1.5s cubic-bezier(.5, 0, 1, 1) infinite alternate;  
+</script>
+<script src="js/float.js" defer=""></script>
+<style>
+  .goog-te-gadget-simple {
+      border: none;
   }
-  
-  @keyframes blinker {  
-    from { opacity: 1; }
-    to { opacity: 0; }
+
+  .goog-te-gadget-simple a {
+      color: #000;
   }
-  
-  
-  body > .skiptranslate {
-      display: none;
+</style>
+<style type="text/css">
+  .btn-primary {
+      background-color: #000000;
   }
-  
-  .goog-te-banner-frame.skiptranslate {
-      display: none !important;
+
+  .btn-secondary {
+      background-color: #d13636;
   }
-  body {
-      top: 0px !important;
+
+  .btn-secondary:hover {
+      opacity: 0.6;
   }
-  
-  </style>
-  
-  <style type="text/css">
-    .goog-logo-link {
-        display:none !important;
-    }
-  
-    .goog-te-gadget img {
-        display:none !important;
-    }
-  
-    .VIpgJd-ZVi9od-l4eHX-hSRGPd {
-        display:none !important;
-    }
-  
-  .VIpgJd-ZVi9od-ORHb-OEVmcd{
-      display: none !important;
+
+  .btn-primary:hover {
+      opacity: 0.6;
   }
-  
-  </style>
-  
-  
-  
-  
-  
-  
-  </head>
-  <body class="hold-transition skin-blue sidebar-mini" style="font-family: Segoe UI,Tahoma,Verdana,Arial,sans-serif !important;">
-  <div class="wrapper">
-  
-    <header class="main-header">
-  
-      ﻿
-  
-  
-  
-  
-  
-  <!-- Logo -->
-      <a href="index.php" class="logo">
-        <!-- mini logo for sidebar mini 50x50 pixels -->
-        <span class="logo-mini"><b>Links</b></span>
-        <!-- logo for regular state and mobile devices -->
-        <span style="font-size:18px; font-family: Segoe UI,Tahoma,Verdana,Arial,sans-serif;"><p class="name">Loading...</p></span>
-        
-  
-      </a>
-  
-      <!-- Header Navbar: style can be found in header.less -->
-      <nav class="navbar navbar-static-top">
-        <!-- Sidebar toggle button-->
-        <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
-          <span class="sr-only">Toggle navigation</span>
-        </a>
-        <!-- Navbar Right Menu -->
-        <div class="navbar-custom-menu">
-          <ul class="nav navbar-nav">
-  
-            <!-- Messages: style can be found in dropdown.less-->
-            <li class="dropdown messages-menu">
-              
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                <i class="fa fa-envelope-o"></i>
-                            </a>
-              
-  
-  
-            </li>
-            <!-- Notifications: style can be found in dropdown.less -->
-            <li class="dropdown notifications-menu">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                <i class="fa fa-bell-o"></i>
-                            </a>
-                        </li>
-            <!-- Tasks: style can be found in dropdown.less -->
-            <li class="dropdown tasks-menu">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                <i class="fa fa-flag-o"></i>
-                            </a>
-              
-            </li>
-  
-  
-            <!-- User Account: style can be found in dropdown.less -->
-            <li class="dropdown user user-menu">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" onclick="event.preventDefault(); logout();">
-                <img src="" class="user-image">
-  
-                <!-- <span class="hidden-xs"></span> -->
-               
-                <i class="fa fa-circle blink" style="color: #883C0452;"></i>
-               Logout
-              </a>
-  
-              <script>
-                function logout() {
-                  document.location.href = 'login.html';
-                  sessionStorage.removeItem('token');
-                };
-              </script>
-  
-              <ul class="dropdown-menu">
-                <!-- User image -->
-                <li class="user-header">
-                  <img src="" class="user-image" alt="User Image">
-                  <p class="drop-name">
-                    Loading...
-                    <!-- <small>3011 Lakimau St, Honolulu, HI 96817</small>
-                    <small>Hawaii, United States</small> -->
-                  </p>
-                </li>
-                <!-- Menu Footer-->
-                <li class="user-footer">
-                  <div class="pull-right">
-                    <a href="/" class="btn btn-default btn-flat">Sign out</a>
+</style>
+
+
+  <div class="nk-app-root">
+      <!-- main @s -->
+      <div class="nk-main ">
+          <!-- sidebar @s -->
+          <div class="nk-sidebar nk-sidebar-fixed " data-content="sidebarMenu">
+              <div class="nk-sidebar-element nk-sidebar-head" style="border-bottom: solid #fe473a;">
+                  <div class="nk-sidebar-brand">
+                      <a href="dash" class="logo-link nk-sidebar-logo">
+                          <img class="logo-light logo-img" src="images/logo.png" srcset="images/logo.png 2x" alt="logo">
+                          <img class="logo-dark logo-img" src="images/logo.png" srcset="images/logo.png 2x" alt="logo-dark">
+
+                      </a>
                   </div>
-                </li>
-              </ul>
-            </li>
-            
-  
-            <!-- Control Sidebar Toggle Button -->
-            <!-- <li>
-              <a href="#" data-toggle="active"><i class="fa fa-gears"></i></a>
-            </li> -->
-          </ul>
-        </div>
-  
-      </nav>  </header>
-    <!-- Left side column. contains the logo and sidebar -->
-    <aside class="main-sidebar">
-      <!-- sidebar: style can be found in sidebar.less -->
-      <section class="sidebar">
-        <!-- Sidebar user panel -->
-        <div class="user-panel">
-          <div class="pull-center image">
-           <center> 
-              <img id="profileImage" src="" class="user-image" alt="Loading..." width="120px" height="150px" style="border-radius: 5px;"><br>
-              
-              <div style="color: white; font-family: Segoe UI,Tahoma,Verdana,Arial,sans-serif;"> &gt;&gt; <i class="fa fa-circle text-success blink" style="color: #36F026; "></i>&nbsp; Online &lt;&lt; </div>
-             
-              <hr style="border-color: white; border-style: dashed;">
-           </center>
-           
+                  <div class="nk-menu-trigger mr-n2">
+                      <a href="#" class="nk-nav-toggle nk-quick-nav-icon d-xl-none" data-target="sidebarMenu"><em class="icon ni ni-arrow-left"></em></a>
+                  </div>
+              </div><!-- .nk-sidebar-element -->
+              <div class="nk-sidebar-element">
+                  <div class="nk-sidebar-body" data-simplebar="">
+                      <div class="nk-sidebar-content">
+                          <div class="nk-sidebar-widget d-none d-xl-block">
+                              <div class="user-account-info between-center">
+                                  <div class="user-account-main">
+                                      <h6 class="overline-title-alt">Available Balance</h6>
+                                      <div class="user-balance userbalance">    0 <small class="currency currency-btc">USD</small></div>
+                                      <!-- <div class="user-balance-alt">201,900 <span class="currency currency-btc">USD</span></div> -->
+                                  </div>
+                                  <a href="#" class="btn btn-white btn-icon btn-light"><em class="icon ni ni-line-chart"></em></a>
+                              </div>
+                              <ul class="user-account-data gy-1">
+                                  <li>
+                                      <div class="user-account-label">
+                                          <span class="sub-text">Income</span>
+                                      </div>
+                                      <div class="user-account-value">
+
+                                          <span class="text-success ml-2">66.12% <em class="icon ni ni-arrow-long-up"></em></span>
+                                      </div>
+                                  </li>
+                                  <li>
+                                      <div class="user-account-label">
+                                          <span class="sub-text">Debits</span>
+                                      </div>
+                                      <div class="user-account-value">
+                                          <span class="text-danger ml-2">24.18% <em class="icon ni ni-arrow-long-down"></em></span>
+                                      </div>
+                                  </li>
+                              </ul>
+                              <div class="user-account-actions">
+                                  <ul class="g-3">
+                                      <li><a href="transfer" class="btn btn-lg btn-primary"><span><i class="fas fa-money-bill-alt"></i> Transfer</span></a></li>
+                                      <li><a href="bills" class="btn btn-lg btn-secondary"><span><i class="fas fa-file-invoice-dollar"></i> Pay Bills</span></a></li>
+                                  </ul>
+                              </div>
+                          </div><!-- .nk-sidebar-widget -->
+                          <div class="nk-sidebar-widget nk-sidebar-widget-full d-xl-none pt-0">
+                              <a class="nk-profile-toggle toggle-expand" data-target="sidebarProfile" href="#">
+                                  <div class="user-card-wrap">
+                                      <div class="user-card">
+                                          <!-- <div class="user-avatar">
+                                              <span>EK</span>
+                                          </div> -->
+                                          <div class="user-info">
+                                              <span class="lead-text name">Loading...</span>
+                                              <span class="sub-text">Loading...</span>
+                                          </div>
+                                          <div class="user-action">
+                                              <em class="icon ni ni-chevron-down"></em>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </a>
+                              <div class="nk-profile-content toggle-expand-content" data-content="sidebarProfile">
+                                  <div class="user-account-info between-center">
+                                      <div class="user-account-main">
+                                          <h6 class="overline-title-alt">Available Balance</h6>
+                                          <div class="user-balance userbalance">    0<small class="currency currency-btc">USD</small></div>
+                                          <!-- <div class="user-balance-alt">201900 <span class="currency currency-btc">USD</span></div> -->
+                                      </div>
+                                      <a href="#" class="btn btn-icon btn-light"><em class="icon ni ni-line-chart"></em></a>
+                                  </div>
+                                  <ul class="user-account-data">
+                                      <li>
+                                          <div class="user-account-label">
+                                              <span class="sub-text">income</span>
+                                          </div>
+                                          <div class="user-account-value">
+
+                                              <span class="text-success ml-2">66.12% <em class="icon ni ni-arrow-long-up"></em></span>
+                                          </div>
+                                      </li>
+                                      <li>
+                                          <div class="user-account-label">
+                                              <span class="sub-text">Debits</span>
+                                          </div>
+                                          <div class="user-account-value">
+
+                                              <span class="text-danger ml-2">24.18%<em class="icon ni ni-arrow-long-up"></em></span>
+                                          </div>
+                                      </li>
+                                  </ul>
+                                  <ul class="user-account-links">
+                                      <li><a href="transfer.php" class="link"><span> Transfer Funds</span> <em class="icon ni ni-wallet-out"></em></a></li>
+                                      <li><a href="authenticate" class="link"><span>Pay Bills</span> <em class="icon ni ni-wallet-in"></em></a></li>
+                                  </ul>
+                                  <ul class="link-list">
+                                      <li><a href="profile"><em class="icon ni ni-user-alt"></em><span>View Profile</span></a></li>
+                                      <li><a href="account-setting"><em class="icon ni ni-setting-alt"></em><span>Account Setting</span></a></li>
+                                      <li><a href="activity-logs"><em class="icon ni ni-activity-alt"></em><span>Login Activity</span></a></li>
+                                  </ul>
+                                  <ul class="link-list">
+                                      <li><a href="logout"><em class="icon ni ni-signout"></em><span>Sign out</span></a></li>
+                                  </ul>
+                              </div>
+                          </div><!-- .nk-sidebar-widget -->
+                          <div class="nk-sidebar-menu">
+                              <!-- Menu -->
+                              <ul class="nk-menu">
+                                  <li class="nk-menu-heading">
+                                      <h6 class="overline-title">Menu</h6>
+                                  </li>
+                                  <li class="nk-menu-item">
+                                      <a href="dash" class="nk-menu-link">
+                                          <span class="nk-menu-icon"><em class="icon ni ni-dashboard"></em></span>
+                                          <span class="nk-menu-text">Dashboard</span>
+                                      </a>
+                                  </li>
+                                  <!-- <li class="nk-menu-item">
+                                      <a href="myaccount" class="nk-menu-link">
+                                          <span class="nk-menu-icon"><em class="icon ni ni-user-c"></em></span>
+                                          <span class="nk-menu-text">My Account</span>
+                                      </a>
+                                  </li> -->
+                                  <li class="nk-menu-item">
+                                      <a href="summary" class="nk-menu-link">
+                                          <span class="nk-menu-icon"><em class="icon ni ni-report-profit"></em></span>
+                                          <span class="nk-menu-text">Account summary</span>
+                                      </a>
+                                  </li>
+                                  <li class="nk-menu-item">
+                                      <a href="transfer" class="nk-menu-link">
+                                          <span class="nk-menu-icon"><em class="icon ni ni-wallet-out"></em></span>
+                                          <span class="nk-menu-text">Transfer</span>
+                                      </a>
+                                  </li>
+                                  <li class="nk-menu-item">
+                                      <a href="wire" class="nk-menu-link">
+                                          <span class="nk-menu-icon"><em class="icon ni ni-money"></em></span>
+                                          <span class="nk-menu-text">Cross-border Transfer</span>
+                                      </a>
+                                  </li>
+                                  <li class="nk-menu-item">
+                                      <a href="check-deposit" class="nk-menu-link">
+                                          <span class="nk-menu-icon"><em class="icon ni ni-wallet-in"></em></span>
+                                          <span class="nk-menu-text">Deposit Check</span>
+                                      </a>
+                                  </li>
+                                  <li class="nk-menu-item">
+                                      <a href="pay-bills" class="nk-menu-link">
+                                          <span class="nk-menu-icon"><em class="icon ni ni-cc-secure"></em></span>
+                                          <span class="nk-menu-text">Pay Bills</span>
+                                      </a>
+                                  </li>
+                                  <li class="nk-menu-item">
+                                      <a href="card" class="nk-menu-link">
+                                          <span class="nk-menu-icon"><em class="icon ni ni-cc-alt"></em></span>
+                                          <span class="nk-menu-text">Cards</span>
+                                      </a>
+                                  </li>
+                                  
+                                  <li class="nk-menu-item">
+                                      <a href="account-setting" class="nk-menu-link">
+                                          <span class="nk-menu-icon"><em class="icon ni ni-setting-alt-fill"></em></span>
+                                          <span class="nk-menu-text">Account Setting</span>
+                                      </a>
+                                  </li>
+                                  <li class="nk-menu-item">
+                                      <a href="contact" class="nk-menu-link">
+                                          <span class="nk-menu-icon"><em class="icon ni ni-help-alt"></em></span>
+                                          <span class="nk-menu-text">Support</span>
+                                      </a>
+                                  </li>
+                              </ul><!-- .nk-menu -->
+                          </div><!-- .nk-sidebar-menu -->
+
+                          <div class="nk-sidebar-footer">
+                              <ul class="nk-menu nk-menu-footer">
+
+                                  <a href="#" style="">
+                                      <div id="google_translate_element"></div>
+                                  </a>
+
+                              </ul><!-- .nk-footer-menu -->
+                          </div><!-- .nk-sidebar-footer -->
+                      </div><!-- .nk-sidebar-content -->
+                  </div><!-- .nk-sidebar-body -->
+              </div><!-- .nk-sidebar-element -->
           </div>
-         <!--  <div class="pull-left info">
-            <p><font color="#99FF00"></font></p>
-           <small><font color="yellow">Accountholder</font></small> <br>
-     <br>
-          </div> -->
-        </div>
-        <!-- search form -->
-         <!-- <center><div id="google_translate_element"></div></center> -->
-        <!-- /.search form -->
-        <!-- sidebar menu: : style can be found in sidebar.less -->
-        <ul class="sidebar-menu" data-widget="tree">
-          <!-- <li class="header" style="color: #09AFFF"><hr></li> -->
-          
-          <li>
-            <a href="dash.html">
-              <i class="fa fa-dashboard"></i> <span>Dashboard</span>
-              
-            </a>
-            
-          </li>
-  
-  
-  
-  
-          <li>
-            <a href="transactions.html">
-              <i class="fa fa-files-o"></i>
-              <span>Account Statement</span>
-              <span class="pull-right-container">
-                <span class="label label-primary pull-right"></span>
-              </span>
-            </a>
-            
-          </li>
-  
-          <li>
-  
-              
-            <a href="fundtransfer.html">
-              <i class="fa fa-th"></i> <span>Fund Transfer</span>
-              <span class="pull-right-container">
-                            </span>
-            </a>
-          </li>
-  
-  
-            <li>
-            <a href="card-request.html">
-              <i class="fa fa-credit-card"></i> <span>ATM Card Request</span>
-              
-            </a>
-            
-          </li>
-  
-  
-  
-  
-         
-        <li class="treeview">
-            <a href="#">
-              <i class="fa fa-laptop"></i>
-              <span>Contact</span>
-              <span class="pull-right-container">
-                <i class="fa fa-angle-left pull-right"></i>
-              </span>
-            </a>
-            <ul class="treeview-menu">
-              <li><a href="support.html?cid=Customercare Unit"><i class="fa fa-circle-o"></i> Customercare Unit</a></li>
-              <li><a href="support.html?cid=Intl Remittance Unit"><i class="fa fa-circle-o"></i> Int'l Remittance Unit</a></li>
-              <li><a href="support.html?cid=Technical Unit"><i class="fa fa-circle-o"></i> Technical Unit</a></li>
-              <li><a href="support.html?cid=Others"><i class="fa fa-circle-o"></i> Others</a></li>
-            </ul>
-        </li>
-  
-        <li>
-            <a href="investment-plans.html">
-              <i class="fa fa-university"></i> <span>Investment</span>
-              
-            </a>
-            
-          </li>
-          
-          <!-- <li>
-            <a href="bit-payment.html">
-              <i class="fa fa-money"></i> <span>Fund My Account</span>
-              
-            </a>
-            
-          </li> -->
-  
-          <li>
-            <a href="change-password.html">
-              <i class="fa fa-keyboard-o "></i> <span>Password Change</span>
-              
-            </a>
-           
-          </li>
-          <li>
-            <a href="change-pin.html">
-              <i class="fa fa-barcode"></i> <span>Change PIN</span>
-              
-            </a>
-            
-          </li>
-          <li>
-            <a href="changemail.html">
-              <i class="fa fa-edit"></i> <span>Change Contact Info</span>
-              
-            </a>
-          </li>
-  
-          <li>
-            <a href="nok.html">
-              <i class="fa fa-user"></i> <span>Next of Kin</span>
-              
-            </a>
-          </li>
-  
-          <!-- <li>
-            <a href="logout.php">
-              <i class="fa fa-power-off"></i> <span>Logout</span>
-              
-            </a>
-          </li> -->
-          
-          
-        </ul>
-      </section>
-      <!-- /.sidebar -->
-    </aside>
-    <!-- Content Wrapper. Contains page content -->
-    <div class="content-wrapper">
-      <!-- Content Header (Page header) -->
-      <section class="content-header">
-        <h1>
-          <img src="images/default.png" alt="APEX TFB" style="max-width: 100px;">
-        </h1>
-        <ol class="breadcrumb">
-          <li><a href="index.php"><i class="fa fa-dashboard"></i> Home</a></li>
-          <li class="active">Change Contact</li>
-        </ol>
-      </section>
-  
-      <!-- Main content -->
-      <section class="content">
-        <!-- Info boxes -->
-        
-  
-  <div class="row">
-          <div class="col-md-3 col-sm-6 col-xs-12">
-            <div class="info-box">
-              <span class="info-box-icon bg-aqua"><i class="fa fa-bar-chart-o"></i></span>
-  
-              <div class="info-box-content">
-                <span class="info-box-text">Total Balance</span>
-                <span class="info-box-number">$0 <br></span>
-                <span><form action="transactions.html">
-                  <input class="btn btn-primary btn-xs" type="submit" value="Money Transfer">
-                </form></span>
-              </div>
-              <!-- /.info-box-content -->
-            </div>
-            <!-- /.info-box -->
-          </div>
-          <!-- /.col -->
-          <div class="col-md-3 col-sm-6 col-xs-12">
-            <div class="info-box">
-              <span class="info-box-icon bg-red"><i class="fa fa-money"></i></span>
-  
-              <div class="info-box-content">
-                <span class="info-box-text">TOTAL DEBIT</span>
-                <span class="info-box-number">$498,576.00<br>
-                      <small style="font-weight: 500;"><font color="red">Total funds debited</font></small></span>
-              </div>
-              <!-- /.info-box-content -->
-            </div>
-            <!-- /.info-box -->
-          </div>
-          <!-- /.col -->
-  
-          <!-- fix for small devices only -->
-          <div class="clearfix visible-sm-block"></div>
-  
-          <div class="col-md-3 col-sm-6 col-xs-12">
-            <div class="info-box">
-              <span class="info-box-icon bg-green"><i class="fa fa-plus"></i></span>
-  
-              <div class="info-box-content">
-                <span class="info-box-text">Current Credit</span>
-                <span class="info-box-number">$50,000.00<br>
-                <small style="font-weight: 500;"><font color="green">2024-05-15 09:54:07</font></small></span>
-              </div>
-              <!-- /.info-box-content -->
-            </div>
-            <!-- /.info-box -->
-          </div>
-          <!-- /.col -->
-          <div class="col-md-3 col-sm-6 col-xs-12">
-            <div class="info-box">
-              <span class="info-box-icon bg-yellow"><i class="fa fa-rotate-left"></i></span>
-  
-              <div class="info-box-content">
-                <span class="info-box-text">Current Debit</span>
-                <span class="info-box-number">$7,000.00<br><small style="font-weight: 500;"><font color="green">2024-04-31 0:3 26:09</font></small></span>
-  
-              </div>
-              <!-- /.info-box-content -->
-            </div>
-            <!-- /.info-box -->
-          </div>
-          <!-- /.col -->
-        </div>      <!-- /.row -->
-  
-  
-                  <div class="callout callout-success">
-                    <h4>CHANGE CONTACT INFORMATION</h4>
-                    It's advisable to ensure that your contact information is up-to-date always.
-                </div>
-                <div class="row">
-                  <div class="col-md-6"> 
-          
-                    <div class="box box-info">
-                      <div class="box-header with-border">
-                        <h3 class="box-title">CHANGE NAME FORM</h3>
-                      </div>
-                      <form role="form" action="" method="POST">
-                        <div class="box-body">
-                           <div class="form-group">
-                            <label for="exampleInputEmail1">New Name</label>
-                            <input type="text" class="form-control" name="newName" id="newName" placeholder="Type your new Name here..." required="">
+          <!-- sidebar @e -->
+          <!-- wrap @s -->
+          <div class="nk-wrap ">
+              <!-- main header @s -->
+              <div class="nk-header nk-header-fluid nk-header-fixed is-secondary">
+                  <div class="container-fluid">
+                      <div class="nk-header-wrap">
+                          <div class="nk-menu-trigger d-xl-none ml-n1">
+                              <a href="#" class="nk-nav-toggle nk-quick-nav-icon" data-target="sidebarMenu"><em class="icon ni ni-menu"></em></a>
                           </div>
-                       
-          
-                           <button type="submit" class="btn btn-primary" name="em" onclick="event.preventDefault(); updateUserName()">Change Name!</button>
-          
-                        </div>
-                        </form>
-                        <!-- /.box-body -->
-          
+                          <div class="nk-header-brand d-xl-none">
+                              <a href="#" class="logo-link">
+                                  <img class="logo-light logo-img" src="images/logo.png" srcset="images/logo.png" alt="logo">
+                                  <img class="logo-dark logo-img" src="images/logo.png" srcset="images/logo.png" alt="logo-dark">
+
+                              </a>
+                          </div>
+                          <div class="nk-header-news d-none d-xl-block">
+                              <div class="nk-news-list">
+                                  <a class="nk-news-item" href="#">
+                                      <div class="nk-news-icon">
+                                          <em class="icon ni ni-card-view"></em>
+                                      </div>
+                                      <div class="nk-news-text">
+                                          <p>Do you know the latest update of Covid 2019? <span> An overview of ours is now available here.</span></p>
+                                          <em class="icon ni ni-external"></em>
+                                      </div>
+                                  </a>
+                              </div>
+                          </div>
+                          <div class="nk-header-tools">
+                              <ul class="nk-quick-nav">
+                                  <li class="dropdown user-dropdown">
+                                      <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                          <div class="user-toggle">
+                                              <div class="user-avatar sm">
+                                                  <em class="icon ni ni-user-alt"></em>
+                                              </div>
+                                              <div class="user-info d-none d-md-block">
+                                                  <div class="user-status user-status-verified">Connected</div>
+                                                  <div class="user-name dropdown-indicator jname">Loading... </div>
+                                              </div>
+                                          </div>
+                                      </a>
+                                      <div class="dropdown-menu dropdown-menu-md dropdown-menu-right dropdown-menu-s1">
+                                          <div class="dropdown-inner user-card-wrap bg-lighter d-none d-md-block">
+                                              <div class="user-card">
+                                                  <!-- <div class="user-avatar">
+                                                      <span>KE</span>
+                                                  </div> -->
+                                                  <div class="user-info">
+                                                      <span class="lead-text username">Loading...</span>
+                                                      <span class="sub-text useraccount">Loading...</span>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                          <div class="dropdown-inner user-account-info">
+                                              <h6 class="overline-title-alt">Checking Account</h6>
+                                              <div class="user-balance userbalance">    0 <small class="currency currency-btc">USD</small></div>
+                                              <!-- <div class="user-balance-sub">Local <span>201,900 <span class="currency currency-btc">USD</span></span></div> -->
+                                              <a href="transfer" class="link"><span>Transfer Funds</span> <em class="icon ni ni-wallet-out"></em></a>
+                                          </div>
+                                          <div class="dropdown-inner">
+                                              <ul class="link-list">
+                                                  <li><a href="profile"><em class="icon ni ni-user-alt"></em><span>View Profile</span></a></li>
+                                                  <li><a href="account-setting"><em class="icon ni ni-setting-alt"></em><span>Account Setting</span></a></li>
+                                                  <li><a href="password-reset"><em class="icon ni ni-security"></em><span>Reset Password</span></a></li>
+                                                  <li><a href="activity-logs"><em class="icon ni ni-activity-alt"></em><span>Login Activity</span></a></li>
+                                                  <li><a class="dark-switch" href="activity-logs"><em class="icon ni ni-moon"></em><span>Dark Mode</span></a></li>
+                                              </ul>
+                                          </div>
+                                          <div class="dropdown-inner">
+                                              <ul class="link-list">
+                                                  <li><a href="logout"><em class="icon ni ni-signout"></em><span>Sign out</span></a></li>
+                                              </ul>
+                                          </div>
+                                      </div>
+                                  </li>
+                              </ul>
+                          </div>
+                      </div>
                   </div>
-  
-        <div class="row">
-  
-          <div class="col-md-6"> 
-  
-            <div class="box box-info">
-              <div class="box-header with-border">
-                <h3 class="box-title">CHANGE EMAIL FORM</h3>
               </div>
-              <form role="form" action="" method="POST">
-                <div class="box-body">
-                  <div class="form-group">
-                    <label for="exampleInputEmail1">Email</label>
-                    <input type="text" class="form-control" name="op" value="Loading..." readonly="">
+              <!-- main header @e --><div class="nk-content">
+  <iframe src="ER-LRTICKER.php" height="30" width="100%" frameborder="0" scrolling="no" marginwidth="0" marginheight="0"></iframe><div class="container-xl wide-lg">
+      <div class="nk-content-body">
+      <div class="nk-block-head">
+       <div class="nk-block-head-sub">
+       </div>
+        
+         <div class="nk-content nk-content-fluid">
+                  <div class="container-xl wide-lg">
+                      <div class="nk-content-body">
+                          <div class="buysell wide-xs m-auto">
+                              <div class="buysell-title text-center">
+                                  <h2 class="title">Nexcrests Bank Admin. Always Protect</h2>
+                              </div><!-- .buysell-title -->
+                                      <div class="buysell-field form-group">
+                                        <div class="result"></div>
+                                          <div class="form-label-group">
+                                              <label class="form-label" for="buysell-amount">Lock Account Number</label>
+                                          </div>
+                                          <div class="form-control-group">
+                                              <input type="text" class="form-control form-control-lg form-control-number" id="" name="amount" placeholder="">
+                                          </div>
+                                      </div>
+                                      <div class="buysell-field form-group">
+                                      </div><!-- .buysell-field -->
+                                      <div class="buysell-field form-action">
+                                          <button type="submit" class="btn btn-lg btn-block btn-primary stepOne" id="btn1">Lock Account Number</button>
+                                      </div>
+                                      <div class="buysell-field form-group">
+                                        <div class="result"></div>
+                                          <div class="form-label-group">
+                                              <label class="form-label" for="buysell-amount">Change Account Profile Picture</label>
+                                          </div>
+                                          <div class="form-control-group">
+                                              <input type="file" class="form-control form-control-lg form-control-number" id="" name="image-upload" placeholder="">
+                                          </div>
+                                          <div class="form-label-group">
+                                            <label class="form-label" for="buysell-amount">Which Account to Change Profile Picture</label>
+                                        </div>
+                                        <div class="form-control-group">
+                                            <input type="text" class="form-control form-control-lg form-control-number" id="accNum" name="amount" placeholder="">
+                                        </div>
+                                      </div>
+                                      <div class="buysell-field form-group">
+                                      </div><!-- .buysell-field -->
+                                      <div class="buysell-field form-action">
+                                          <button type="submit" class="btn btn-lg btn-block btn-primary stepOne" id="btn1" onclick="event.preventDefault(); saveImage();">Change Account Profile Picture</button>
+                                      </div>
+
+                                      <div class="form-label-group">
+                                        <label class="form-label" for="buysell-amount">Set Account PIN</label>
+                                    </div>
+                                    <div class="form-control-group">
+                                        <input type="text" class="form-control form-control-lg form-control-number" id="" name="amount" placeholder="">
+                                    </div>
+                                    <div class="form-label-group">
+                                      <label class="form-label" for="buysell-amount">Which Account to Change PIN</label>
+                                  </div>
+                                  <div class="form-control-group">
+                                      <input type="text" class="form-control form-control-lg form-control-number" id="" name="amount" placeholder="">
+                                  </div>
+                                  <div class="buysell-field form-group">
+                                  </div><!-- .buysell-field -->
+                                  <div class="buysell-field form-action">
+                                      <button type="submit" class="btn btn-lg btn-block btn-primary stepOne" id="btn1">Change Account PIN</button>
+                                  </div>
+                                  </form>
+                                                          </div>
+                                                          
+
+                                                          
+                      </div>
+
+                      
                   </div>
-  
-                   <div class="form-group">
-                    <label for="exampleInputEmail1">New Email</label>
-                    <input type="text" class="form-control" name="email" id="newEmailInput" placeholder="Type your new Email here..." required="">
-                  </div>
-               
-  
-                   <button type="submit" class="btn btn-primary" name="em" onclick="event.preventDefault(); updateEmailAndPassword()">Change Email!</button>
-  
-                </div>
-                </form>
-                <!-- /.box-body -->
-  
-            </div>
+              </div>
           </div>
-            
-  
-  
-          <div class="col-md-6"> 
-  
-            <div class="box box-success">
-              <div class="box-header with-border">
-                <h3 class="box-title">CHANGE PHONE NUMBER FORM</h3>
-              </div>
-              <!-- /.box-header -->
-              <!-- form start -->
-              <form role="form" action="" method="POST">
-                <div class="box-body">
-                  <div class="form-group">
-                    <label for="exampleInputEmail1">Phone Number</label>
-                    <input type="text" class="form-control" name="fgf" value="Loading..." readonly="">
-                  </div>
-  
-                   <div class="form-group">
-                    <label for="exampleInputEmail1">New Phone Number</label>
-                    <input type="text" class="form-control" name="phone" placeholder="Type your new Phone Number here..." required="">
-                  </div>
-               
-  
-                   <button type="submit" class="btn btn-primary" name="pho">Change Phone!</button>
-  
-                </div>
-                </form>
-  
-            </div>
-          </div>
-  
-          <div class="row">
-            <div class="col-md-6"> 
-    
-              <div class="box box-info">
-                <div class="box-header with-border">
-                  <h3 class="box-title">CHANGE Picture FORM</h3>
-                </div>
-                <form role="form" action="" method="POST">
-                  <div class="box-body">
-                     <div class="form-group">
-                      <!-- <label for="exampleInputEmail1">New Name</label> -->
-                      <input type="file" class="form-control" name="image-upload" required="">
-                    </div>
-                 
-    
-                     <button type="submit" class="btn btn-primary" name="em" onclick="event.preventDefault(); saveImage()">Change Picture!</button>
-    
-                  </div>
-                  <!-- /.box-body -->
-                </form>
-              </div>
-  
-          </div>
-  
-  
-          <div class="col-md-6"> 
-  
-            <div class="box box-info">
-              <div class="box-header with-border">
-                <h3 class="box-title">CHANGE ADDRESS FORM</h3>
-              </div>
-              <form role="form" action="" method="POST">
-                <div class="box-body">
-                  <div class="form-group">
-                    <label for="exampleInputEmail1">Address</label>
-                    <input type="text" class="form-control" name="newAddress" id="newEmailInput" placeholder="Type your New Address here..." required="">
-                  </div>
-               
-  
-                   <button type="submit" class="btn btn-primary" name="em" onclick="event.preventDefault(); updateOrAddAddress()">Change Address!</button>
-  
-                </div>
-                </form>
-                <!-- /.box-body -->
-  
-            </div>
-          </div>
-  
-          <div class="col-md-6"> 
-  
-            <div class="box box-info">
-              <div class="box-header with-border">
-                <h3 class="box-title">CHANGE BALANCE FORM</h3>
-              </div>
-              <form role="form" action="" method="POST">
-                <div class="box-body">
-                  <div class="form-group">
-                    <label for="exampleInputEmail1">Account Number</label>
-                    <input type="text" class="form-control" id="accountNumber" value="">
-                  </div>
-  
-                   <div class="form-group">
-                    <label for="exampleInputEmail1">Amount</label>
-                    <input type="text" class="form-control" id="newBalance" placeholder="" required="">
-                  </div>
-               
-  
-                   <button type="submit" class="btn btn-primary" name="em" onclick="event.preventDefault(); updateUserBalance()">Change Balance!</button>
-  
-                </div>
-                </form>
-                <!-- /.box-body -->
-  
-            </div>
-          </div>
-  
-          <div class="col-md-6"> 
-            <div class="box box-info">
-                <div class="box-header with-border">
-                    <h3 class="box-title">SAVE TRANSACTION FORM</h3>
-                </div>
-                <form>
-                    <div class="box-body">
-                        <!-- Transaction Description -->
-                        <div class="form-group">
-                            <label for="transactionDescription">Transaction Description</label>
-                            <input type="text" class="form-control" name="description" id="transactionDescription" placeholder="Enter transaction description..." required>
-                        </div>
+      </div>
         
-                        <!-- Transaction Amount -->
-                        <div class="form-group">
-                            <label for="transactionAmount">Amount</label>
-                            <input type="number" class="form-control" name="amountTrans" id="transactionAmount" placeholder="Enter transaction amount..." required>
-                        </div>
-        
-                        <!-- Transaction Date -->
-                        <div class="form-group">
-                            <label for="transactionDate">Transaction Date</label>
-                            <input type="date" class="form-control" name="dateTrans" id="transactionDate" required>
-                        </div>
-        
-                        <!-- Credit or Debit -->
-                        <div class="form-group">
-                            <label for="isCredit">Credit</label>
-                            <input type="checkbox" name="isCredit" id="isCredit">
-                        </div>
-        
-                        <!-- Submit Button -->
-                        <button onclick="event.preventDefault(); saveTransaction();">Save Transaction</button>
-                  
-                    </div>
-                </form>
-              
-                <!-- /.box-body -->
-            </div>
-        </div>
-        
-  
-          <div class="col-md-6"> 
-  
-            <div class="box box-info">
-              <div class="box-header with-border">
-                <h3 class="box-title">CHANGE DOB FORM</h3>
-              </div>
-              <form role="form" action="" method="POST">
-                   <div class="form-group">
-                    <label for="exampleInputEmail1">New DOB</label>
-                    <input type="date" class="form-control" name="newDOB" id="newEmailInput" placeholder="Type your new Email here..." required="">
-                  </div>
-               
-  
-                   <button type="submit" class="btn btn-primary" name="em" onclick="event.preventDefault(); updateOrAddDOB()">Change DOB!</button>
-  
-                </div>
-                </form>
-                <!-- /.box-body -->
-  
-            </div>
-          </div>
-  
-          <div class="box box-info">
-            <div class="box-header with-border">
-              <h3 class="box-title">CHANGE NEXT OF KIN FORM</h3>
-            </div>
-            <form role="form" action="" method="POST">
-              <div class="box-body">
-                 <div class="form-group">
-                  <label for="exampleInputEmail1">New Name</label>
-                  <input type="text" class="form-control" name="nokName" id="newName" placeholder="Type your new Next of Kin Name here..." required="">
-                  <label for="exampleInputEmail1">New Email</label>
-                  <input type="text" class="form-control" name="nokEmail" id="newName" placeholder="Type your new Next of Kin Phone here..." required="">
-                  <label for="exampleInputEmail1">New Phone</label>
-                  <input type="text" class="form-control" name="nokPhone" id="newName" placeholder="Type your new Next of Kin Email here..." required="">
-                  <label for="exampleInputEmail1">New Address</label>
-                  <input type="text" class="form-control" name="nokAddress" id="newName" placeholder="Type your new Next of Kin Email here..." required="">3
-                </div>
-             
-  
-                 <button type="submit" class="btn btn-primary" name="em" onclick="event.preventDefault(); updateNextOfKin()">Change Next of Kin!</button>
-  
-              </div>
-              </form>
-              <!-- /.box-body -->
-  
-        </div>
-  
-                <!-- /.row -->
-              </section></div>
-  
-  
-              <!-- ./box-body -->
-                
-  
-  
-              <!-- /.box-footer -->
-            </div>
-            <!-- /.box -->
-          
-          <!-- /.col -->
-        
-  
-  
-  
-  
-        <!-- /.row -->
-  
-        <!-- Main row -->
-        
-        <!-- /.row -->
       
-      <!-- /.content -->
-    
-    <!-- /.content-wrapper -->
-  
-  
-  
-  
-  
-  
-  
-    <footer class="main-footer">
-      <div class="pull-right hidden-xs">
-        <b>WebSecure</b> 6.2.2
+
+<div class="nk-footer nk-footer-fluid">
+                  <div class="container-fluid">
+                      <div class="nk-footer-wrap">
+                          <div class="nk-footer-copyright"> � 2025 Nexcrests Bank - <a href="#">All rights reserved.</a>
+                          </div>
+                          <div class="nk-footer-links">
+                              <ul class="nav nav-sm">
+                                  <li class="nav-item"><a class="nav-link" href="#">Terms</a></li>
+                                  <li class="nav-item"><a class="nav-link" href="privacy">Privacy</a></li>
+                                  <li class="nav-item"><a class="nav-link" href="contact">Help</a></li>
+                              </ul>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <!-- footer @e -->
+          </div>
+          <!-- wrap @e -->
       </div>
-      <strong>Copyright � 1991-<script>document.write(new Date().getFullYear());</script>   <a>APEX TFB                                 </a>.</strong> All rights
-      reserved.
-    </footer>
-  
-  
-    <!-- Control Sidebar -->
-    <aside class="control-sidebar control-sidebar-dark">
-      <!-- Create the tabs -->
-      <ul class="nav nav-tabs nav-justified control-sidebar-tabs">
-     
-   
-      </ul>
-      <!-- Tab panes -->
-      <div class="tab-content">
-        <!-- Home tab content -->
-        <div class="tab-pane" id="control-sidebar-home-tab">
-          
-         
-       
-          
-          <!-- /.control-sidebar-menu -->
-  
-        </div>
-        <!-- /.tab-pane -->
-  
-        <!-- Settings tab content -->
-        <div class="tab-pane" id="control-sidebar-settings-tab">
-          <form method="post">
-            <h3 class="control-sidebar-heading">General Settings</h3>
-  
-            <div class="form-group">
-              <label class="control-sidebar-subheading">
-                Report panel usage
-                <input type="checkbox" class="pull-right" checked="">
-              </label>
-  
-             
-            </div>
-            <!-- /.form-group -->
-            
-            <!-- /.form-group -->
-          </form>
-        </div>
-        <!-- /.tab-pane -->
-      </div>
-    </aside>
-    <!-- /.control-sidebar -->
-    <!-- Add the sidebar's background. This div must be placed
-         immediately after the control sidebar -->
-    <div class="control-sidebar-bg"></div>
-  
-  
-  <!-- ./wrapper -->
-  
-    <!-- jQuery 3 -->
-  <script src="js/jquery.min_1.js"></script>
-  <!-- Bootstrap 3.3.7 -->
-  
-  <!-- DataTables -->
-  <script src="js/jquery.dataTables.min.js"></script>
-  <script src="js/dataTables.bootstrap.min.js"></script>
-  
-  <script src="js/bootstrap.min.js"></script>
-  <!-- FastClick -->
-  <!-- <script src="bower_components/fastclick/lib/fastclick.js"></script> -->
-  <!-- AdminLTE App -->
-  <script src="js/adminlte.min.js"></script>
-  <!-- Sparkline -->
-  <script src="js/jquery.sparkline.min.js"></script>
-  <!-- jvectormap  -->
-  <!-- <script src="plugins/jvectormap/jquery-jvectormap-1.2.2.min.js"></script>
-  <script src="plugins/jvectormap/jquery-jvectormap-world-mill-en.js"></script> -->
-  <!-- SlimScroll -->
-  <script src="js/jquery.slimscroll.min.js"></script>
-  <!-- ChartJS 
-  <script src="bower_components/Chart.js/Chart.js"></script> -->
-  <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-  <script src="js/dashboard2.js"></script>
-  <!-- AdminLTE for demo purposes -->
-  <script src="js/demo.js"></script>
-  <script>
-    $(function () {
-      $('#example1').DataTable()
-      $('#example2').DataTable({
-        'paging'      : true,
-        'lengthChange': true,
-        'searching'   : true,
-        'ordering'    : false,
-        'info'        : true,
-        'autoWidth'   : false
-      })
-    })
+      <!-- main @e -->
+  </div>
+  <!-- app-root @e -->
+  <!-- JavaScript -->
+  <script src="js/jquery.min.js"></script>
+  <script src="js/country.js"></script>
+  <script src="js/bundle.js"></script>
+  <script src="js/scripts.js"></script>
+  <script src="js/chart-crypto.js"></script>
+  <script src="js/sweetalert.js"></script>
+ <script src="js/jquery.min_1.js"></script>
+ <script src="js/custom.js"></script>
+ <script src="js/toastr.js"></script>
+
+ <script src="firebase.js" type="module"></script>
+
+ <script type="module">
+  console.log('Working..');
+  getUserDetails(); // Execute the function
   </script>
-  
-      
-  
-  
-  
-  </body></html>
-  
+
+</body></html>

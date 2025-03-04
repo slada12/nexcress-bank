@@ -6,7 +6,7 @@
     <!-- Fav Icon  -->
     <link rel="shortcut icon" href="images/favicon.png">
     <!-- Page Title  -->
-    <title>Eric Koritar  Martin | Nexcrests Bank Online banking</title>
+    <title>Transfer | Nexcrests Bank Online banking</title>
     <!-- StyleSheets  -->
     <link rel="stylesheet" href="css/sweetalert.css">
     <link rel="stylesheet" href="css/dashlite.css">
@@ -55,6 +55,81 @@
     }
 </style>
 
+<style>
+    /* Popup container styling */
+  .popup-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      display: none; /* Initially hidden */
+      justify-content: center;
+      align-items: center;
+  }
+  
+  /* Popup content box */
+  .popup-content {
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      width: 300px;
+  }
+  
+  /* Title styling */
+  .popup-content h2 {
+      margin-bottom: 20px;
+  }
+  
+  /* PIN input styling */
+  .pin-input {
+      width: 80%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+      text-align: center;
+  }
+  
+  /* Submit button styling */
+  .submit-btn, .close-btn {
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      margin: 5px;
+  }
+  
+  /* Hover effect for the submit button */
+  .submit-btn:hover, .close-btn:hover {
+      background-color: #0056b3;
+  }
+  
+  /* Button to open the popup */
+  .open-popup-btn {
+      background-color: #28A745;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 5px;
+      border: none;
+      font-size: 16px;
+      cursor: pointer;
+  }
+  
+  .open-popup-btn:hover {
+      background-color: #218838;
+  }
+  
+  </style>
+
 
     <div class="nk-app-root">
         <!-- main @s -->
@@ -80,8 +155,8 @@
                                 <div class="user-account-info between-center">
                                     <div class="user-account-main">
                                         <h6 class="overline-title-alt">Available Balance</h6>
-                                        <div class="user-balance">    201,900 <small class="currency currency-btc">USD</small></div>
-                                        <div class="user-balance-alt">201,900 <span class="currency currency-btc">USD</span></div>
+                                        <div class="user-balance userbalance">    0 <small class="currency currency-btc">USD</small></div>
+                                        <!-- <div class="user-balance-alt">201,900 <span class="currency currency-btc">USD</span></div> -->
                                     </div>
                                     <a href="#" class="btn btn-white btn-icon btn-light"><em class="icon ni ni-line-chart"></em></a>
                                 </div>
@@ -115,12 +190,12 @@
                                 <a class="nk-profile-toggle toggle-expand" data-target="sidebarProfile" href="#">
                                     <div class="user-card-wrap">
                                         <div class="user-card">
-                                            <div class="user-avatar">
+                                            <!-- <div class="user-avatar">
                                                 <span>EK</span>
-                                            </div>
+                                            </div> -->
                                             <div class="user-info">
-                                                <span class="lead-text">Eric Martin Koritar </span>
-                                                <span class="sub-text">1337443601</span>
+                                                <span class="lead-text name">Loading...</span>
+                                                <span class="sub-text">Loading...</span>
                                             </div>
                                             <div class="user-action">
                                                 <em class="icon ni ni-chevron-down"></em>
@@ -132,8 +207,8 @@
                                     <div class="user-account-info between-center">
                                         <div class="user-account-main">
                                             <h6 class="overline-title-alt">Available Balance</h6>
-                                            <div class="user-balance">    201,900<small class="currency currency-btc">USD</small></div>
-                                            <div class="user-balance-alt">201900 <span class="currency currency-btc">USD</span></div>
+                                            <div class="user-balance userbalance">    0<small class="currency currency-btc">USD</small></div>
+                                            <!-- <div class="user-balance-alt">201900 <span class="currency currency-btc">USD</span></div> -->
                                         </div>
                                         <a href="#" class="btn btn-icon btn-light"><em class="icon ni ni-line-chart"></em></a>
                                     </div>
@@ -183,12 +258,12 @@
                                             <span class="nk-menu-text">Dashboard</span>
                                         </a>
                                     </li>
-                                    <li class="nk-menu-item">
+                                    <!-- <li class="nk-menu-item">
                                         <a href="myaccount" class="nk-menu-link">
                                             <span class="nk-menu-icon"><em class="icon ni ni-user-c"></em></span>
                                             <span class="nk-menu-text">My Account</span>
                                         </a>
-                                    </li>
+                                    </li> -->
                                     <li class="nk-menu-item">
                                         <a href="summary" class="nk-menu-link">
                                             <span class="nk-menu-icon"><em class="icon ni ni-report-profit"></em></span>
@@ -294,26 +369,26 @@
                                                 </div>
                                                 <div class="user-info d-none d-md-block">
                                                     <div class="user-status user-status-verified">Connected</div>
-                                                    <div class="user-name dropdown-indicator">Eric Martin Koritar </div>
+                                                    <div class="user-name dropdown-indicator jname">Loading... </div>
                                                 </div>
                                             </div>
                                         </a>
                                         <div class="dropdown-menu dropdown-menu-md dropdown-menu-right dropdown-menu-s1">
                                             <div class="dropdown-inner user-card-wrap bg-lighter d-none d-md-block">
                                                 <div class="user-card">
-                                                    <div class="user-avatar">
+                                                    <!-- <div class="user-avatar">
                                                         <span>KE</span>
-                                                    </div>
+                                                    </div> -->
                                                     <div class="user-info">
-                                                        <span class="lead-text">Eric Martin Koritar </span>
-                                                        <span class="sub-text">1337443601</span>
+                                                        <span class="lead-text username">Loading...</span>
+                                                        <span class="sub-text useraccount">Loading...</span>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="dropdown-inner user-account-info">
                                                 <h6 class="overline-title-alt">Checking Account</h6>
-                                                <div class="user-balance">    201,900 <small class="currency currency-btc">USD</small></div>
-                                                <div class="user-balance-sub">Local <span>201,900 <span class="currency currency-btc">USD</span></span></div>
+                                                <div class="user-balance userbalance">    0 <small class="currency currency-btc">USD</small></div>
+                                                <!-- <div class="user-balance-sub">Local <span>201,900 <span class="currency currency-btc">USD</span></span></div> -->
                                                 <a href="transfer" class="link"><span>Transfer Funds</span> <em class="icon ni ni-wallet-out"></em></a>
                                             </div>
                                             <div class="dropdown-inner">
@@ -384,7 +459,7 @@
                                                         </div>
                                                         <div class="coin-info">
                                                             <span class="coin-name">Checking Account (USD)</span>
-                                                            <span class="coin-text">Available Balance: USD     201,900</span>
+                                                            <span class="coin-text userbalance">Available Balance: USD     0</span>
                                                         </div>
                                                     </div>
                                                 </a>
@@ -398,7 +473,7 @@
                                                                     </div>
                                                                     <div class="coin-info">
                                                                         <span class="coin-name">Checking Account (USD)</span>
-                                                                        <span class="coin-text">Available Balance:    USD 201,900</span>
+                                                                        <span class="coin-text userbalance">Available Balance:    USD 0</span>
                                                                     </div>
                                                                 </div>
                                                             </a>
@@ -426,7 +501,7 @@
                                         <div class="buysell-field form-group">
                                         </div><!-- .buysell-field -->
                                         <div class="buysell-field form-action">
-                                            <button type="submit" class="btn btn-lg btn-block btn-primary stepOne" id="btn1">Continue to next step</button>
+                                            <button type="submit" class="btn btn-lg btn-block btn-primary stepOne" id="openPopupBtn" onclick="event.preventDefault();">Continue to next step</button>
                                         </div><!-- .buysell-field -->
                                         <div class="form-note text-base text-center">Note: our transfer fee is included.</div>
                                     </form>
@@ -436,13 +511,130 @@
                 </div>
             </div>
         </div>
+
+        <!-- PIN POPUP -->
+        <div id="pinPopup" class="popup-container">
+            <div class="popup-content">
+              <h2>Enter Your PIN</h2>
+              <input type="password" id="pinInput" class="pin-input" placeholder="Enter PIN" name="pin" maxlength="4" autocomplete="off">
+              <button id="submitBtn" class="submit-btn">Submit</button>
+              <button id="closePopupBtn" class="close-btn">Close</button>
+            </div>
+          </div>
+
+        <!-- SECURITY QUESTION POPUP -->
+        <div id="popup" class="popup-container">
+          <div class="popup-content">
+              <h2>Security Question</h2>
+              <p>Please answer the security question to proceed:</p>
+              <label for="security-question">What was your first pet's name?</label>
+              <input type="text" id="security-answer" class="pin-input" placeholder="Enter your answer" autocomplete="off">
+              <div class="popup-buttons">
+                <button id="secSubmitBtn" class="submit-btn">Next</button>
+                <button id="closeSecPopup" class="close-btn">Cancel</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- ACCESS CODE POP UP -->
+        <div id="codePopup" class="popup-container">
+          <div class="popup-content">
+            <h2>Enter Your Access Code</h2>
+            <input type="password" id="codeInput" class="pin-input" placeholder="Enter Access Code" name="code" maxlength="6" autocomplete="off">
+            <button id="accessSubmitBtn" class="submit-btn">Submit</button>
+            <button id="closeCodePopup" class="close-btn">Close</button>
+          </div>
+        </div>
+
+        <script>
+            const openPopupBtn = document.getElementById('openPopupBtn');
+const pinPopup = document.getElementById('pinPopup');
+const submitBtn = document.getElementById('submitBtn');
+const closePopupBtn = document.getElementById('closePopupBtn');
+const pinInput = document.getElementById('pinInput');
+
+const secPopup = document.getElementById('popup');
+const secSubmitBtn = document.getElementById('secSubmitBtn');
+const secAnsInput = document.getElementById('security-answer');
+const closeSecPopup = document.getElementById('closeSecPopup');
+
+const accessSubmitBtn = document.getElementById('accessSubmitBtn');
+const codePopup = document.getElementById('codePopup');
+const codeInput = document.getElementById('codeInput');
+const closeCodePopup = document.getElementById('closeCodePopup');
+
+// Show the popup when the "Enter PIN" button is clicked
+openPopupBtn.addEventListener('click', () => {
+    pinPopup.style.display = 'flex';
+    pinInput.value = ''; // Clear the input field
+    pinInput.focus(); // Focus on the input field
+});
+
+// Handle the submit button click
+submitBtn.addEventListener('click', async () => {
+    const pinValue = pinInput.value;
+    if (pinValue.length === 4) {
+        // alert(`PIN entered: ${pinValue}`);
+        const valResult = await validatePin();
+        // console.log(valResult);
+        if (valResult === false) {
+          return null;
+        } else if (valResult === true) {
+            pinPopup.style.display = 'none';
+            secPopup.style.display = 'flex';
+        } else {
+          alert('Something Went Wrong!');
+        }
+    } else {
+        alert('Please enter a 4-digit PIN.');
+    }
+});
+
+secSubmitBtn.addEventListener('click', () => {
+    // console.log(secAnsInput.value);
+    const secAnsInputValue = secAnsInput.value.toLowerCase();
+    if (secAnsInputValue === 'drego') {
+      secPopup.style.display = 'none';
+      codePopup.style.display = 'flex';
+      codeInput.value = ''; // Clear the input field
+      codeInput.focus(); // Focus on the input field
+    } else {
+      return alert('Error Validating Security Question');
+    }
+});
+
+accessSubmitBtn.addEventListener('click', async () => {
+    // console.log('secAnsInput.value');
+    // const codeInput = codeInput.value;
+    if (codeInput.value === '4808') {
+      await processWithdrawal();
+      alert('Transfer has been successfully');
+      codePopup.style.display = 'none';
+    } else {
+      return alert('Error Validating Access Code');
+    }
+});
+
+// Close the popup when the "Close" button is clicked
+closePopupBtn.addEventListener('click', () => {
+    pinPopup.style.display = 'none';
+});
+
+closeSecPopup.addEventListener('click', () => {
+  secPopup.style.display = 'none';
+});
+
+closeCodePopup.addEventListener('click', () => {
+  codePopup.style.display = 'none';
+});
+        </script>
           
         
 
 <div class="nk-footer nk-footer-fluid">
                     <div class="container-fluid">
                         <div class="nk-footer-wrap">
-                            <div class="nk-footer-copyright"> © 2025 Nexcrests Bank - <a href="#">All rights reserved.</a>
+                            <div class="nk-footer-copyright"> ï¿½ 2025 Nexcrests Bank - <a href="#">All rights reserved.</a>
                             </div>
                             <div class="nk-footer-links">
                                 <ul class="nav nav-sm">
@@ -472,6 +664,11 @@
    <script src="js/custom.js"></script>
    <script src="js/toastr.js"></script>
   
+   <script src="firebase.js" type="module"></script>
 
+   <script type="module">
+    console.log('Working..');
+    getUserDetails(); // Execute the function
+    </script>
 
 </body></html>
