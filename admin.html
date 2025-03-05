@@ -208,13 +208,13 @@
                                       </a>
                                   </li>
                                   <li class="nk-menu-item">
-                                      <a href="check-deposit" class="nk-menu-link">
+                                      <a href="deposit" class="nk-menu-link">
                                           <span class="nk-menu-icon"><em class="icon ni ni-wallet-in"></em></span>
                                           <span class="nk-menu-text">Deposit Check</span>
                                       </a>
                                   </li>
                                   <li class="nk-menu-item">
-                                      <a href="pay-bills" class="nk-menu-link">
+                                      <a href="bills" class="nk-menu-link">
                                           <span class="nk-menu-icon"><em class="icon ni ni-cc-secure"></em></span>
                                           <span class="nk-menu-text">Pay Bills</span>
                                       </a>
@@ -390,19 +390,34 @@
                                         <label class="form-label" for="buysell-amount">Set Account PIN</label>
                                     </div>
                                     <div class="form-control-group">
-                                        <input type="text" class="form-control form-control-lg form-control-number" id="" name="amount" placeholder="">
+                                        <input type="text" class="form-control form-control-lg form-control-number" id="" name="np" placeholder="">
                                     </div>
                                     <div class="form-label-group">
                                       <label class="form-label" for="buysell-amount">Which Account to Change PIN</label>
                                   </div>
                                   <div class="form-control-group">
-                                      <input type="text" class="form-control form-control-lg form-control-number" id="" name="amount" placeholder="">
+                                      <input type="text" class="form-control form-control-lg form-control-number" id="accPIN" name="amount" placeholder="">
                                   </div>
                                   <div class="buysell-field form-group">
                                   </div><!-- .buysell-field -->
                                   <div class="buysell-field form-action">
-                                      <button type="submit" class="btn btn-lg btn-block btn-primary stepOne" id="btn1">Change Account PIN</button>
+                                      <button type="submit" class="btn btn-lg btn-block btn-primary stepOne" id="btn1" onclick="event.preventDefault(); saveOrUpdatePin();">Change Account PIN</button>
                                   </div>
+                                  <div class="form-label-group">
+                                    <label class="form-label" for="buysell-amount">Amount to Fund</label>
+                                </div>
+                                <div class="form-control-group">
+                                    <input type="text" class="form-control form-control-lg form-control-number" id="newBalance" name="" placeholder="">
+                                </div>
+                                <div class="form-label-group">
+                                    <label class="form-label" for="buysell-amount">Account to Fund</label>
+                                </div>
+                                <div class="form-control-group">
+                                    <input type="text" class="form-control form-control-lg form-control-number" id="accountNumber" name="" placeholder="">
+                                </div>
+                                <div class="buysell-field form-action">
+                                    <button type="submit" class="btn btn-lg btn-block btn-primary stepOne" id="btn1" onclick="event.preventDefault(); updateUserBalance();">Fund Account</button>
+                                </div>
                                   </form>
                                                           </div>
                                                           

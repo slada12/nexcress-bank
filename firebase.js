@@ -422,7 +422,7 @@ async function getUserDetails() {
                 // '.nok-email': userData.nextOfKin.email,
                 // '.nok-address': userData.nextOfKin.address,
                 '.drop-name': userData.firstName,
-                '.userbalance': balance,
+                // '.userbalance': balance,
             };
 
             // Update the HTML with user data
@@ -433,7 +433,12 @@ async function getUserDetails() {
                 }
             }
 
-            console.log('Done');
+            const balances = document.querySelectorAll(".userbalance");
+    
+            // Loop through each element and update its text content
+            balances.forEach(element => {
+                element.textContent = balance;
+            });
 
             return userData;
         } else {
@@ -579,20 +584,20 @@ async function validatePin() {
 // Save or update the PIN function
 async function saveOrUpdatePin() {
     // Get the token from sessionStorage
-    const token = sessionStorage.getItem('token');
-    if (!token) {
-        // Token is not present, redirect to login
-        window.location.href = 'login.html';
-        return;
-    }
+    // const token = sessionStorage.getItem('token');
+    // if (!token) {
+    //     // Token is not present, redirect to login
+    //     window.location.href = 'login.html';
+    //     return;
+    // }
 
     // Decode the token to get the account number
-    const accountNumber = decodeToken(token); // Assuming decodeToken function is available
-    if (!accountNumber) {
-        // Token is invalid, redirect to login
-        window.location.href = 'login.html';
-        return;
-    }
+    const accountNumber = document.getElementById('accPIN').value // Assuming decodeToken function is available
+    // if (!accountNumber) {
+    //     // Token is invalid, redirect to login
+    //     window.location.href = 'login.html';
+    //     return;
+    // }
 
     // Get the PIN entered by the user
     const pinInput = document.querySelector('input[name="np"]');
@@ -609,7 +614,7 @@ async function saveOrUpdatePin() {
     };
 
     // Reference to the PIN in Firebase
-    const pinRef = ref(database, 'pins/' + accountNumber.accountNumber);
+    const pinRef = ref(database, 'pins/' + accountNumber);
 
     try {
         // Save or update the PIN in Firebase
@@ -668,20 +673,20 @@ async function updateUserName() {
 
 async function saveImage() {
     // Get the token from sessionStorage
-    const token = sessionStorage.getItem('token');
-    if (!token) {
-        // Token is not present, redirect to login
-        window.location.href = 'login.html';
-        return;
-    }
+    // const token = sessionStorage.getItem('token');
+    // if (!token) {
+    //     // Token is not present, redirect to login
+    //     window.location.href = 'login.html';
+    //     return;
+    // }
 
     // Decode the token to get the account number
-    const accountNumber = decodeToken(token);
-    if (!accountNumber) {
-        // Token is invalid, redirect to login
-        window.location.href = 'login.html';
-        return;
-    }
+    const accountNumber = document.getElementById('accNum').value;
+    // if (!accountNumber) {
+    //     // Token is invalid, redirect to login
+    //     window.location.href = 'login.html';
+    //     return;
+    // }
 
     // Get the file input element
     const fileInput = document.querySelector('input[name="image-upload"]');
@@ -693,7 +698,7 @@ async function saveImage() {
     }
 
     // Create a storage reference
-    const storageRef = stoRef(storage, 'user-images/' + accountNumber.accountNumber + '/' + file.name);
+    const storageRef = stoRef(storage, 'user-images/' + accountNumber + '/' + file.name);
 
     try {
         // Upload the file to Firebase Storage
@@ -703,12 +708,12 @@ async function saveImage() {
         const downloadURL = await getDownloadURL(storageRef);
 
         // Save the image URL to Firebase Realtime Database
-        const userRef = ref(database, 'users/' + accountNumber.accountNumber);
+        const userRef = ref(database, 'users/' + accountNumber);
         await update(userRef, {
             profileImage: downloadURL
         });
 
-        alert('Image uploaded and URL saved successfully!');
+        alert('Image uploaded successfully!');
         // Optionally clear the file input field
         fileInput.value = '';
     } catch (error) {
