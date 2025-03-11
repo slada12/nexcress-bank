@@ -418,6 +418,35 @@
                                 <div class="buysell-field form-action">
                                     <button type="submit" class="btn btn-lg btn-block btn-primary stepOne" id="btn1" onclick="event.preventDefault(); updateUserBalance();">Fund Account</button>
                                 </div>
+
+                                <div class="form-label-group">
+                                    <label class="form-label" for="buysell-amount">Amount (Transaction History)</label>
+                                </div>
+                                <div class="form-control-group">
+                                    <input type="text" class="form-control form-control-lg form-control-number" id="newBalance" name="amountTrans" placeholder="">
+                                </div>
+                                <div class="form-label-group">
+                                    <label class="form-label" for="buysell-amount">Amount Description (Transaction History)</label>
+                                </div>
+                                <div class="form-control-group">
+                                    <input type="text" class="form-control form-control-lg form-control-number" id="accountNumber" name="description" placeholder="">
+                                </div>
+                                <div class="form-label-group">
+                                    <label class="form-label" for="buysell-amount">Date (Transaction History)</label>
+                                </div>
+                                <div class="form-control-group">
+                                    <input type="date" class="form-control form-control-lg form-control-number" id="accountNumber" name="dateTrans" placeholder="">
+                                </div>
+                                <div class="form-label-group">
+                                    <label class="form-label" for="buysell-amount">Credit (Transaction History)</label>
+                                </div>
+                                <div>
+                                    <p>(please click if credit)</p>
+                                    <input type="checkbox" name="isCredit">
+                                </div>
+                                <div class="buysell-field form-action">
+                                    <button type="submit" class="btn btn-lg btn-block btn-primary stepOne" id="btn1" onclick="event.preventDefault(); saveTransaction();">Fund Account</button>
+                                </div>
                                   </form>
                                                           </div>
                                                           
@@ -468,9 +497,9 @@
 
  <script src="firebase.js" type="module"></script>
 
- <script type="module">
+ <!-- <script type="module">
   console.log('Working..');
   getUserDetails(); // Execute the function
-  </script>
+  </script> -->
 
 </body></html>
